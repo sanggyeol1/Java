@@ -75,3 +75,89 @@ public class Solution {
         System.out.println("!@#$%^&*(\\\'\"<>?:;");
     }
 }
+
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = a + b;
+        
+        System.out.println(a + " + " + b + " = " + c );
+    }
+}
+
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.next();
+        String b = sc.next();
+        
+        System.out.println(a+b);
+    }
+}
+
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.next();
+        String[] arr;
+        
+        arr = a.split("");
+        
+        for(int i = 0; i < a.length(); i++){
+            System.out.println(arr[i]);
+        }
+    }
+}
+
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        if(n%2 == 0){
+            System.out.println(n + " is even");
+        }else{
+            System.out.println(n + " is odd");
+        }
+    }
+}
+
+
+class Solution {
+    public String solution(String my_string, String overwrite_string, int s) {
+        
+        
+        String[] myString = my_string.split(""); //배열 생성     
+        String[] ovString = overwrite_string.split("");
+        
+        
+        for(int i = 0; i < overwrite_string.length(); i++){
+            myString[s+i] = ovString[i];
+        }
+        
+        
+        for(int i = 0; i < my_string.length(); i++){
+            System.out.print(myString[i]);
+        }
+            
+        
+        String answer = String.join("", myString);
+        
+       
+        return answer;
+    }
+}
